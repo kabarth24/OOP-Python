@@ -22,7 +22,7 @@ class Restaurante:
     for restaurante in Restaurante.restaurantes:
       print(f'{restaurante.nome} | {restaurante.categoria} | {restaurante.ativo}') # Não usamos o self por estarmos nos referindo a lista, e não ao objeto diretamente
 
-# Criando um construtor, obrigatóriamente temos que passar os parâmetros na hora de chamar a classe, como no exemplo abaixo:
+# Ao criar um construtor, obrigatóriamente temos que passar os parâmetros na hora de instanciar a classe, como no exemplo abaixo:
 restaurante_praca = Restaurante('Praça', 'Gourmet')
 restaurante_pizza = Restaurante('Pizza Express', 'Italiana')
 
