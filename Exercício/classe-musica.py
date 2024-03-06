@@ -1,19 +1,21 @@
 class Musica:
   nome = ''
   artista = ''
-  duracao = float
+  duracao = ''
 
 musica1 = Musica()
-Musica.nome = 'Balada Louca'
-Musica.artista = 'Munhoz & Mariano'
-Musica.duracao = 3
+musica1.nome = 'Balada Louca'
+musica1.artista = 'Munhoz & Mariano'
+musica1.duracao = '3'
 
 musica2 = Musica()
-Musica.nome = 'Bêbado Famoso'
-Musica.artista = 'Murilo Huff'
-Musica.duracao = 3.18
+musica2.nome = 'Bêbado Famoso'
+musica2.artista = 'Murilo Huff'
+musica2.duracao = '3:18'
 
 musica3 = Musica()
-Musica.nome = 'Mensagem Pra Ela'
-Musica.artista = 'César Menotti & Fabiano'
-Musica.duracao = 2.43
+musica3.nome = 'Mensagem Pra Ela'
+musica3.artista = 'César Menotti & Fabiano'
+musica3.duracao = '2:43'
+
+print(f'Música: {musica1.nome} - Dupla sertaneja: {musica1.artista}, Duração: {musica1.duracao} minutos')
