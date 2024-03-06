@@ -5,12 +5,37 @@ class Restaurante:
   categoria = ''
   ativo = False
 
+# Chamando a classe Restaurante
 restaurante_praca = Restaurante()
-restaurante_praca.nome = 'Praça'
-restaurante_praca.categoria = 'Gourmet'
 
+# Atribuindo valores aos atributos da classe Restaurante
+restaurante_praca.nome = 'Bistrô'
+restaurante_praca.categoria = 'Italiana'
+
+# Acessando o valor do atributo nome da instância restaurante_praca
+nome_do_restaurante = restaurante_praca.nome
+
+# Verificando se o restaurante está ativo ou inativo
+if restaurante_praca.ativo:
+  print('O restaurante está ativo.')
+else:
+  print('O restaurante está inativo.')
+
+# Acessando o valor do atributo categoria e armazenando em uma variável
+categoria_restaurante = Restaurante.categoria
+
+# Nova instância
 restaurante_pizza = Restaurante()
+restaurante_pizza.nome = 'Pizza Place'
+restaurante_pizza.categoria = 'Fast Food'
+restaurante_pizza.ativo = True
 
-restaurantes = [restaurante_praca, restaurante_pizza]
+# Verificando se a categoria da instância restaurante_pizza é 'Fast Food'
+if restaurante_pizza.categoria == 'Fast Food':
+  print('A categoria é Fast Food.')
+else:
+  print('A categoria não é Fast Food.')
 
-print(vars(restaurante_praca))
+# Imprimindo o nome e a categoria da instância restaurante_praca
+print(f'Nome do restaurante: {restaurante_praca.nome}')
+print(f'Categoria da instância restaurante_praca: {restaurante_praca.categoria}')
