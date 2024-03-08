@@ -39,13 +39,14 @@ class Restaurante:
 
   # Método para os restaurantes receberem a avaliação
   def receber_avaliacao(self, cliente, nota):
-    avaliacao = Avaliacao(cliente, nota)
-    self._avaliacao.append(avaliacao)
+    if 0 < nota <= 5:
+      avaliacao = Avaliacao(cliente, nota)
+      self._avaliacao.append(avaliacao)
 
   @property
   def media_avaliacoes(self):
     if not self._avaliacao:
-      return 0 # Validando se o restaurante não tiver nenhuma avaliação, retornará 0
+      return '-' # Validando se o restaurante não tiver nenhuma avaliação, retornará 0
     soma_das_notas = sum(avaliacao._nota for avaliacao in self._avaliacao) # Somando todas as notas
     quantidade_de_notas = len(self._avaliacao) # Armazenando o total de notas que temos
     media = round(soma_das_notas / quantidade_de_notas, 1)
